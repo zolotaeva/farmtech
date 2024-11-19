@@ -490,7 +490,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #5C93F5;}
 				.modal__btns .btn+.btn{margin-top: 15px;}
 
 				.modal .form-input{position: relative;}
-				.modal .form-input label{position: absolute; top: 16px; left: 24px; font-weight: 500; font-size: 20px; color: #D2D2D2; pointer-events: none;}
+				.modal .form-input label{position: absolute; top: 16px; left: 24px; font-weight: 500; font-size: 20px; color: #D2D2D2; pointer-events: none; background: #fff; display: block; max-width: 560px; width: 100%;}
 				.modal .form-input input:focus + label{display: none;}
 				.modal .red{color:#FF0000;}
 				.modal .form-check{padding-left: 0; color: #000000; font-weight: 500; margin-bottom: 0;}

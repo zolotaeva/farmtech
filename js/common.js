@@ -4,6 +4,20 @@ window.addEventListener('load', function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const phoneMask = document.querySelectorAll('.phone');
+
+    const maskOptions = {
+	    mask: '+{7}(000)000-00-00',
+			lazy: false
+    };
+
+    phoneMask.forEach(item => {
+        IMask(item, maskOptions);
+    });
+		
+	
+	
 	const btnBurger = document.querySelector('.js-toggle-menu');
 	const menuTop = document.querySelector('#header_menu');
 	const body = document.querySelector('body');
@@ -113,6 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	},
 		
 	});
+
+	
 
 	//валидация email
 	const emailInput = document.querySelectorAll('.form-email .email');
