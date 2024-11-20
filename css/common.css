@@ -620,7 +620,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #5C93F5;}
 	.presentation-icon{background: url(../i/icon-book-open.svg)#02934E no-repeat center; width: 36px; height: 36px;}
 	.video-icon{background: url(../i/icon-video.svg)#D71010 no-repeat center; width: 36px; height: 36px;}
 	.test-icon{background: url(../i/icon-test.svg)#1068D7 no-repeat center; width: 36px; height: 36px; }
-
+''
 
 	.pagination{margin-top: 40px; display: flex; align-items: center; justify-content: space-between;}
 
@@ -631,6 +631,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #5C93F5;}
 .test__btn{margin-top: 40px;}
 .test__nav{padding-bottom: 40px; border-bottom: 1px solid #D9D9D9}
 .test__nav.fixed{position: fixed; top: 0; left: auto; right: auto; width: calc(100% - 40px); background: #fff; z-index: 5; }
+.test__nav.fixed .test__item-right{margin-top: 254px;}
 .test__nav-box{margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;}
 	.test__nav-item{border: 1px solid #A4D1FF; border-radius: 5px; width: 50px; height: 77px; overflow: hidden; border-top: 0; color: #1068D7; font-weight: 500; font-size: 20px;}
 	.test__nav-item.done{border: 1px solid #1068D7; color: #fff}
