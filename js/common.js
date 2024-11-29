@@ -16,6 +16,39 @@ document.addEventListener("DOMContentLoaded", () => {
         IMask(item, maskOptions);
     });
 		
+		// Обработка клика по элементам .password-control
+    document.body.addEventListener('click', function (event) {
+			if (event.target.classList.contains('password-control')) {
+					event.preventDefault();
+					const passwordInput = event.target.closest('.form-input').querySelector('input');
+					if (passwordInput.type === 'password') {
+							passwordInput.type = 'text';
+							event.target.classList.add('view');
+					} else {
+							passwordInput.type = 'password';
+							event.target.classList.remove('view');
+					}
+			}
+	});
+		// Отслеживание заполнения полей
+    document.body.addEventListener('input', function (event) {
+			if (event.target.classList.contains('form-control')) {
+					if (event.target.value.trim() !== '') {
+							event.target.classList.add('filled');
+					} else {
+							event.target.classList.remove('filled');
+					}
+			}
+		});
+	// Инициализация Bootstrap tooltips
+	const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+	tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+			new bootstrap.Tooltip(tooltipTriggerEl);
+	});
+
+	document.getElementById('file-upload').onchange = function(e) {
+		document.querySelector('.custom-file-upload').innerText = e.target.files[0].name || 'Прикрепить файл';
+	};
 	
 	
 	const btnBurger = document.querySelector('.js-toggle-menu');
