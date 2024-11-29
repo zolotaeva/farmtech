@@ -471,6 +471,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 	
 .modal{background-color: rgba(0, 0, 0, 0.7);}
 	.modal.fade .modal-dialog{margin-top: 8%;max-width: 640px;}
+	#vacancy.modal.fade .modal-dialog{margin-top: 2%;}
 		.modal-content{background: #FFFFFF; border-radius: 30px; padding: 40px; border: none; }
 			.modal-header{border: none; padding: 0; align-items: flex-start;}
 				.modal-header .btn-close{margin-top: 7px;}
