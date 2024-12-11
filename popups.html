@@ -603,10 +603,18 @@
 							<label>Телефон <span class="red">*</span></label>
 							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
 						</div>
-						<div class="form-input required">
-							<input type="text" class="form-control email" required>
-							<label>E-mail <span class="red">*</span></label>
-							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Что то про почту"> <span class="i-icon"></span> </span>
+						<div class="form-email required">
+							<div class="form-input required">
+								<input type="text" class="form-control email" required>
+								<label>E-mail <span class="red">*</span></label>
+								<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Что то про почту"> <span class="i-icon"></span> </span>
+							</div>
+							<select class="domains">
+								<option value="@mail.ru">@mail.ru</option>
+								<option value="@yandex.ru">@yandex.ru</option>
+								<option value="@list.ru">@list.ru</option>
+								<option value="@bk.ru">@bk.ru</option>
+							</select>
 						</div>
 						<div class="form-input required">
 							<input type="password" id="password-input" name="password" class="form-control" required>

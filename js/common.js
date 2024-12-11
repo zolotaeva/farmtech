@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 			}
 	});
-		// Отслеживание заполнения полей
+	// Отслеживание заполнения полей
+	
     document.body.addEventListener('input', function (event) {
 			if (event.target.classList.contains('form-control')) {
 					if (event.target.value.trim() !== '') {
@@ -40,15 +41,28 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 			}
 		});
+	
+		document.body.addEventListener('textarea', function (event) {
+			if (event.target.classList.contains('form-control')) {
+					if (event.target.value.trim() !== '') {
+							event.target.classList.add('filled');
+					} else {
+							event.target.classList.remove('filled');
+					}
+			}
+		});
+	
 	// Инициализация Bootstrap tooltips
 	const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 	tooltipTriggerList.forEach(function (tooltipTriggerEl) {
 			new bootstrap.Tooltip(tooltipTriggerEl);
 	});
+	if (document.getElementById('file-upload')) {
+		document.getElementById('file-upload').onchange = function(e) {
+			document.querySelector('.custom-file-upload').innerText = e.target.files[0].name || 'Прикрепить файл';
+		};
+	}
 
-	document.getElementById('file-upload').onchange = function(e) {
-		document.querySelector('.custom-file-upload').innerText = e.target.files[0].name || 'Прикрепить файл';
-	};
 	
 	
 	const btnBurger = document.querySelector('.js-toggle-menu');

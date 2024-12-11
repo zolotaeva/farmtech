@@ -38,7 +38,7 @@
 									<a class="nav-link" href="#">Курсы</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">Вакансии</a>
+									<a class="nav-link" href="#">ФармВакансии</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#">Обратная связь</a>
@@ -90,88 +90,95 @@
 
 		<div class="section vacancy-detail">
 			<div class="container">
+				<a href="#" class="btn btn-link link-back">Вернуться к списку вакансий</a>
 				<div class="row">
-					<div class="col-xl-6">
-						<div class="vacancy-detail__content">
-							<a href="#" class="btn btn-link link-back">Вернуться к списку вакансий</a>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="vacancy-detail__region -fs-20 -fw-500">Название региона</div>
-								</div>
-								<div class="col-sm-auto">
-									<div class="vacancy-detail__data -fs-20">21.01.24</div>
-								</div>
-							</div>
-							<div class="vacancy-detail__title">Название вакансии, возможно в 2 строки</div>
-							<div class="vacancy-detail__text">
-								<p>Краткое описание требований Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения. Краткое описание требований Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</p>
-								<div class="subtitle">Требования</div>
-								<ul>	
-									<li>Название требования</li>
-									<li>Название требования</li>
-									<li>Название требования</li>
-								</ul>
-								<div class="subtitle">Обязанности</div>
-								<ul>	
-									<li>Название обязанности</li>
-									<li>Название обязанности</li>
-									<li>Название обязанности</li>
-								</ul>
-								<div class="subtitle">Условия</div>
-								<ul>	
-									<li>Название условия</li>
-									<li>Название условия</li>
-									<li>Название условия</li>
-								</ul>
-								<div class="vacancy__actions">
-									<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vacancy">Откликнуться</button>
-									<div class="vacancy__price -fw-600 -fs-32">
-										999 999 руб./месяц
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="section feedback">
-			<div class="container">
-				<div class="row feedback-row">
-					<div class="col-lg-6">
-						<div class="feedback__wrap">
-							<div class="section__title">Остались вопросы? <br>Задайте их нам!</div>
-							<form action="" class="form">
-								<div class="form-group mb-3">
-									<div class="mb-3">
-										<input type="text" class="form-control" placeholder="Ваше имя">
-									</div>
-									<div class="mb-3">
-										<input type="text" class="form-control phone" placeholder="Телефон для связи">
-									</div>
-									<div class="mb-3">
-										<textarea class="form-control" rows="3" placeholder="Ваш вопрос или комментарий"></textarea>
-									</div>
-									<div class="mb-3 -center">
-										<button class="btn btn-primary btn-submit">Задать вопрос</button>
-									</div>
-									<div class="policy -center">
-										Нажимая кнопку "Задать вопрос", вы соглашаетесь с политикой конфиденциальности.
-									</div>
-								</div>
-				
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="feedback__img">
-							<img src="i/feedback.png" alt="">
-						</div>
-					</div>
-				</div>
+					<div class="col-xl-7">
 
+								<div class="vacancy-detail__item">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="vacancy-detail__region -fs-20 -fw-500">Название региона</div>
+									</div>
+								</div>
+								<div class="vacancy-detail__top">
+									<div class="vacancy-detail__title">Название вакансии, возможно в 2 строки</div>
+									<div class="vacancy__actions">
+										<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vacancy">Откликнуться</button>
+										<div class="vacancy__price -fw-600 -fs-32">
+											999 999 руб./месяц
+										</div>
+									</div>
+								</div>
+								<div class="vacancy-detail__text">
+									<p>Краткое описание требований Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения. Краткое описание требований Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</p>
+									<div class="subtitle">Требования</div>
+									<ul>	
+										<li>Название требования</li>
+										<li>Название требования</li>
+										<li>Название требования</li>
+									</ul>
+									<div class="subtitle">Обязанности</div>
+									<ul>	
+										<li>Название обязанности</li>
+										<li>Название обязанности</li>
+										<li>Название обязанности</li>
+									</ul>
+									<div class="subtitle">Условия</div>
+									<ul>	
+										<li>Название условия</li>
+										<li>Название условия</li>
+										<li>Название условия</li>
+									</ul>
+									<div class="vacancy__actions">
+										<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vacancy">Откликнуться</button>
+										
+									</div>
+								</div>
+							</div>
+		
+					</div>
+					<div class="col-xl-5">
+						<div class="feedback vacancy-feedback">
+							<div class="feedback__wrap">
+								<div class="section__title">Остались вопросы? <br>Задайте их нам!</div>
+								<form action="" class="form">
+										<div class="form-input required">
+											<input type="text" class="form-control" required="">
+											<label>Имя<span class="red">*</span></label>
+										</div>
+										<div class="form-input required">
+											<input type="text" class="form-control phone" required id="phone">
+											<label>Телефон <span class="red">*</span></label>
+										</div>
+										<div class="form-input required">
+											<input type="text" class="form-control email" required>
+											<label>E-mail <span class="red">*</span></label>
+										</div>
+										<div class="form-input">
+											<textarea class="form-control" rows="3"></textarea>
+											<label>Ваш вопрос или комментарий</label>
+										</div>
+										<div class="mb-3 -center">
+											<button class="btn btn-primary btn-submit">Задать вопрос</button>
+										</div>
+										<div class="policy -center">
+											Нажимая кнопку "Задать вопрос", вы соглашаетесь с политикой конфиденциальности.
+										</div>
+							
+								</form>
+							</div>
+							<div class="vacancy-bottom">
+								<a href="#" class="vacancy-bottom__link"></a>	
+								<img src="i/s1.jpg" alt="">
+							</div>
+							
+					
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		
 	</main>
 	<footer class="footer">
 		<div class="container">
@@ -253,6 +260,7 @@
 	<script src="libs/bootstrap/bootstrap.min.js"></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script src="libs/fancyselect/fancyselect.js"></script>
+	<script src="https://unpkg.com/imask"></script>
 	<script src="js/common.js"></script>
 </body>
 

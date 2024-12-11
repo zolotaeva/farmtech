@@ -398,27 +398,42 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 				.vacancy__price{color: #1068D7; margin-left: 30px;}
 
 
+
 .vacancy-detail{}
-	.vacancy-detail__content{}
-		.vacancy-detail .link-back{margin-bottom: 25px;}
-		.vacancy-detail .link-back + .row{justify-content: space-between;}
-		.vacancy-detail__region{border-radius: 100px; background: #D2E8FF; padding: 12px 20px; text-align: center; color: #1068D7; display: inline-block;}
+	.vacancy-detail__item{background: #D2E8FF; border-radius: 20px; padding: 40px 40px 62px 40px; font-size: 20px; line-height: 1.5; height: 100%;}
+		.vacancy-detail__top{position: sticky; top: 0; background: #d2e8ff;}
+		.vacancy-detail .link-back{margin-bottom: 40px; display: block; text-align: left;}
+		.vacancy-detail .link-back + .row{justify-content: space-between; align-items: stretch}
+		.vacancy-detail__region{border-radius: 100px; background: #fff; padding: 12px 20px; text-align: center; color: #1068D7; display: inline-block;}
 		.vacancy-detail__title{margin-top: 25px; font-weight: 600; font-size: 36px;}
-		.vacancy-detail__text{margin-top: 40px;}
+		.vacancy-detail .vacancy__actions{display: flex; align-items: center; margin-top: 15px; padding-bottom: 15px;}
+		.vacancy-detail__text{}
 		.vacancy-detail__text * + .subtitle{margin-top: 40px;}
 		.vacancy-detail__text ul{margin-top: 15px;}
+		.vacancy-detail__text ul li{margin-bottom: 5px;}
 		.vacancy-detail__text .subtitle{font-weight: 600; font-size: 20px;}
 
-
-
+		.vacancy-feedback .section__title{font-size: 36px; line-height: 49px;}
+		.vacancy-feedback .section__title br{display: none;}
+		.vacancy-feedback .feedback__wrap{padding: 40px 40px 30px 40px;}
+		.vacancy-bottom{position: relative; border-radius: 20px; overflow: hidden; margin-top: 32px;}
+		.vacancy-bottom:after{content: ''; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); position: absolute; top: 0; right: 0; width: 100%; height: 100%; z-index: 2; }
+.vacancy-bottom img{border-radius: 20px; max-height: 340px; height: 100%; object-fit: cover; max-width: none; width: 100%;}
+.vacancy-bottom__link{background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21H38.9104V39M39 21.09L21.3582 39" stroke="white" stroke-width="2"/><circle cx="30" cy="30" r="29" stroke="white" stroke-width="2"/></svg>'); width: 60px; height: 60px; position: absolute; top: 36px; right: 36px; display: block; z-index: 3;}
+.vacancy-feedback .policy{font-size: 20px;font-family: 'Manrope'; color: #A0A0A0; padding: 0;}
+.vacancy-feedback .section__title{margin-bottom: 30px!important;}
 
 
 /* select */
 .filter__item{--fsb-border: 1px solid #A7A7A7; --fsb-radius: 100px; --fsb-padding: 15px 24px; --fsb-shadow: none; --fsb-font-size: 24px; --fsb-padding-right: 44px; --fsb-arrow-padding: 24px; --fsb-arrow-color: #1068D7;     --fsb-arrow-size: 12px;}
 .fsb-button:after, select[disabled] + .fsb-select .fsb-button[aria-expanded="true"]:after{border-width: 0 3px 3px 0;}
-.fsb-button{font-weight: 500;}
-
-
+.fsb-button{font-weight: 500;     }
+.fsb-button[aria-expanded="true"] + .fsb-list{z-index: 5;}
+.fsb-select{border: 1px solid #ABABAB!important;box-shadow:none}
+.modal .btn-primary:focus, 
+.modal .btn-primary:hover,
+.modal .btn-secondary:focus, 
+.modal .btn-secondary:hover{background: #A9A9A9; color: #fff;; border-color: #A9A9A9;}
 /*.custom-select {
   --fsb-border: 0;
   --fsb-radius: 2em;
@@ -483,7 +498,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 			.modal-icon{margin: 0 auto 25px;}
 			.icon-thanks{background-image: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.9997 0.333313C12.2663 0.333313 0.333008 12.2666 0.333008 27C0.333008 41.72 12.2663 53.6666 26.9997 53.6666C41.7197 53.6666 53.6663 41.72 53.6663 27C53.6663 12.2666 41.7197 0.333313 26.9997 0.333313ZM23.0806 38.9191C22.2995 39.7001 21.0332 39.7001 20.2521 38.9191L9.74722 28.4142C8.96617 27.6331 8.96617 26.3668 9.74722 25.5858L10.6921 24.6409C11.4732 23.8598 12.7395 23.8598 13.5206 24.6409L20.2521 31.3724C21.0332 32.1535 22.2995 32.1535 23.0806 31.3724L40.4788 13.9742C41.2598 13.1931 42.5262 13.1931 43.3072 13.9742L44.2521 14.9191C45.0332 15.7001 45.0332 16.9665 44.2521 17.7475L23.0806 38.9191Z' fill='%231068D7'/%3E%3C/svg%3E"); width: 54px; height: 54px; display: block; }
 			.modal-body p{line-height: 1.5; margin-bottom: 20px;}
-				.modal .form-control{border: 1px solid #ABABAB; border-radius: 100px; padding: 18px 24px; line-height: 1; margin-bottom: 15px;}
+				.form-control{border: 1px solid #ABABAB; border-radius: 100px; padding: 18px 24px; line-height: 1; margin-bottom: 15px;}
 
 
 
@@ -495,16 +510,18 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 				.modal__btns .btn{width: 100%;}
 				.modal__btns .btn+.btn{margin-top: 15px;}
 
-				.modal .form-input{position: relative;}
-				.modal .form-input label{position: absolute; top: 16px; left: 24px; font-weight: 500; font-size: 20px; color: #636363; pointer-events: none; background: #fff; display: block; max-width: 560px; width: 90%;}
-				.modal .form-input input:focus + label,
-				.modal .form-input input.filled + label{font-size: 12px; top: 5px;}
-				.modal .form-input input{font-size: 16px;}
-				.modal .red{color:#FF0000;}
-				.modal .form-check{padding-left: 0; color: #000000; font-weight: 500; margin-bottom: 0;}
-				.modal .form-check a{color: #000000;}
-				.modal .form-check +  .form-check{margin-top: 15px;}
-				.modal .form-check + .form__btns{margin-top: 15px;}
+				.form-input{position: relative;}
+				.form-input label{position: absolute; top: 16px; left: 24px; font-weight: 500; font-size: 20px; color: #636363; pointer-events: none; background: #fff; display: block; max-width: 560px; width: 90%;}
+				.form-input input:focus + label,
+				.form-input input.filled + label,
+				.form-input textarea:focus + label,
+				.form-input textarea.filled + label{font-size: 12px; top: 5px; display: none;}
+				.form-input input{font-size: 16px;}
+				.red{color:#FF0000;}
+				.form-check{padding-left: 0; color: #000000; font-weight: 500; margin-bottom: 0;}
+				.form-check a{color: #000000;}
+				.form-check +  .form-check{margin-top: 15px;}
+				.form-check + .form__btns{margin-top: 15px;}
 
 
 				#reg input[type=checkbox].custom-checkbox + label{position: relative; padding-left: 30px;}
@@ -707,7 +724,7 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 		.subscription__title{color: #0A1532; font-weight: 500; margin-bottom: 20px;}
 
 		.subscription__form{position: relative; border: 1px solid #D2D2D2; border-radius: 100px; margin-bottom: 20px; overflow: hidden;}
-		.subscription__form .form-control{padding: 0 160px 0 21px; height: 60px; border: 0; line-height: 60px;}
+		.subscription__form .form-control{padding: 0 160px 0 21px; height: 60px; border: 0; line-height: 60px; margin-bottom: 0;}
 		.subscription__form .btn{position: absolute; top: 0; right: 0; height: 60px; }
 		.subscription__text{}
 			.subscription__text a{color: #1A1E33;}
