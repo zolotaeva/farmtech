@@ -31,7 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 	});
 	// Отслеживание заполнения полей
-	
+	const formControl = document.querySelectorAll('#reg-example .form-control');
+	formControl.forEach(item => {
+		if (item.value.trim() !== '') {
+			item.classList.add('filled');
+		} else {
+			item.classList.remove('filled');
+		}
+	})
+
     document.body.addEventListener('input', function (event) {
 			if (event.target.classList.contains('form-control')) {
 					if (event.target.value.trim() !== '') {

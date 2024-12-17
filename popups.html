@@ -94,6 +94,11 @@
 					</a>
 				</div>
 				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg-example">
+						<span class="text">регистрация пример</span>
+					</a>
+				</div>
+				<div class="col-auto">
 					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#auth">
 						<span class="text">авторизация</span>
 					</a>
@@ -542,15 +547,25 @@
 					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<p class="-fs-24">Введите электронную почту для входа в личный кабинет</p>
+					<p class="-fs-24">Введите номер телефона и пароль</p>
 					<form action="" class="form">
-						<input type="email" class="form-control" placeholder="E-mail" required>
-						<!--<input type="password" class="form-control" placeholder="Пароль" required>-->
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required>
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						
 					
 						<div class="form__btns center">
 							<input type="submit" class="btn btn-primary" value="Войти" />
-							<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reg" data-bs-dismiss="modal">Регистрация</button>
-							<button type="button" class="btn btn-link">Восстановить пароль</button>
+							<!--<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reg" data-bs-dismiss="modal">Регистрация</button>
+							<button type="button" class="btn btn-link">Восстановить пароль</button>-->
 						</div>
 					</form>
 				</div>
@@ -630,16 +645,85 @@
 						</div>
 						
 						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check1">
+							<label for="check1">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check2" >
+							<label for="check2">Согласен с <a href="#" target="_blank">распространением персональных данных</a><span class="red">*</span></label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check3" checked>
+							<label for="check3">Согласен на <a href="#" target="_blank">получение уведомлений рекламного характера </a><span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+							</label>
+						</div>
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary disabled" value="Зарегистрироваться" />
+							<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#auth" data-bs-dismiss="modal">Войти</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="reg-example" tabindex="-1" aria-labelledby="reg" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Регистрация</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Поля отмеченные <span class="red">*</span> обязательны к заполнению</p>
+					<form action="" class="form">
+						<div class="form-input required" >
+							<input type="text" class="form-control" required value="Иван">
+							<label>Имя<span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone" value="+7(912)345-67-89">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-email required">
+							<div class="form-input required">
+								<input type="text" class="form-control email" required value="ivan.ivanov">
+								<label>E-mail <span class="red">*</span></label>
+								<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Что то про почту"> <span class="i-icon"></span> </span>
+							</div>
+							<select class="domains">
+								<option value="@mail.ru" selected>@mail.ru</option>
+								<option value="@yandex.ru">@yandex.ru</option>
+								<option value="@list.ru">@list.ru</option>
+								<option value="@bk.ru">@bk.ru</option>
+							</select>
+						</div>
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required value="545454544">
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" id="password-input2" name="password" class="form-control" required value="545454544">
+							<label>Повторите пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Будьте внимательны!"> <span class="i-icon"></span> </span>
+						</div>
+						
+						<div class="form-check">
 							<input type="checkbox" class="custom-checkbox" id="check1" checked>
 							<label for="check1">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
 						</div>
 						<div class="form-check">
-							<input type="checkbox" class="custom-checkbox" id="check2" checked >
+							<input type="checkbox" class="custom-checkbox" id="check2" checked>
 							<label for="check2">Согласен с <a href="#" target="_blank">распространением персональных данных</a><span class="red">*</span></label>
 						</div>
 						<div class="form-check">
-							<input type="checkbox" class="custom-checkbox" id="check3">
-							<label for="check3">Согласен на <a href="#" target="_blank">получение уведомлений рекламного характера</a></label>
+							<input type="checkbox" class="custom-checkbox" id="check3" checked>
+							<label for="check3">Согласен на <a href="#" target="_blank">получение уведомлений рекламного характера </a><span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+							</label>
 						</div>
 						<div class="form__btns center">
 							<input type="submit" class="btn btn-primary" value="Зарегистрироваться" />
@@ -682,13 +766,12 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<div class="modal-title">Превышено максимально
-						допустимое число запросов кода</div>
+					<div class="modal-title">Повторный код вход возможен не раньше чем через 15 минут</div>
 					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<p>Вы сможете запросить код повторно через</p>
-					<p class="blue -fs-24 -fw-500">999 секунд</p>
+					<p class="blue -fs-24 -fw-500">15 минут</p>
 					
 				</div>
 			</div>
@@ -739,21 +822,21 @@
 								Прикрепить файл
 							</label>
 						
-							<span class="-fw-500">.doc, .png, pdf, .jpg</span>
+							<span class="-fw-500 ml-15">.doc, .png, pdf, .jpg / макс. размер 5 мб.</span>
 							<input type="file" id="file-upload" style="display: none;"/>
 						</div>
 						<div class="form-input">
 							<input type="text" class="form-control" required>
-							<label>Ссылка на резюме</label>
+							<label>Комментарий</label>
 							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Ссылка на резюме"> <span class="i-icon"></span> </span>
 						</div>
 						<div class="form-check">
-							<input type="checkbox" class="custom-checkbox" id="check1" checked>
-							<label for="check1">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
+							<input type="checkbox" class="custom-checkbox" id="check11">
+							<label for="check11">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
 						</div>
 					
 						<div class="form__btns center">
-							<input type="submit" class="btn btn-primary" value="Отправить" />
+							<input type="submit" class="btn btn-primary disabled" value="Отправить" />
 						</div>
 					</form>
 				</div>
