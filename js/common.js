@@ -7,14 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const phoneMask = document.querySelectorAll('.phone');
 
-    const maskOptions = {
-	    mask: '+{7}(000)000-00-00',
-			lazy: false
-    };
+			
 
-    phoneMask.forEach(item => {
-        IMask(item, maskOptions);
-    });
+			const maskOptions = {
+				mask: '+{7}(000)000-00-00',
+				lazy: false
+			};
+
+			phoneMask.forEach(item => {
+					IMask(item, maskOptions);
+			});
+
 		
 		// Обработка клика по элементам .password-control
     document.body.addEventListener('click', function (event) {
@@ -202,7 +205,22 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+	const filterItems = document.querySelectorAll('.filter__item .filter-title');
 
+	filterItems.forEach(item => {
+		item.addEventListener('click', () => {
+			if (item.parentElement.classList.contains('active')) {
+				item.parentElement.classList.remove('active');
+				
+			} else {
+				document.querySelectorAll('.filter__item').forEach(item => {
+					item.classList.remove('active');
+				});
+				item.parentElement.classList.add('active');
+				
+			}
+		})
+	})
 
 
 		ymaps.ready(function () {
@@ -229,8 +247,31 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 			
+
 	
 
 
 
 });
+
+let rangeMin = document.querySelector(".range-min");
+let rangeMax = document.querySelector(".range-max");           
+	const rangeSlider = new rSlider({
+		target: '#rangeSlider',
+		values: { min: 2000, max: 40000 },
+		step: 1000,
+		range: true,
+		tooltip: false,
+		scale: false,
+		labels: false,
+		set: [4000, 24000],
+		//width: '360px',
+		onChange: function (vals) {
+			var arrVals = vals.split(',');
+			rangeMin.value = arrVals[0];
+			rangeMax.value = arrVals[1];
+		}
+
+	});
+
+	

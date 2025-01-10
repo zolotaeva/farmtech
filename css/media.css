@@ -250,4 +250,9 @@
 	#sms .form-info p{font-size: 16px;line-height: 1.2;}
 	#sms .modal-body p, #sms .modal-body a{line-height: 1.2; font-size: 16px;}
 	.form-input .tooltip{top: 16px;}
+	.filter__item .filter-title{font-size: 20px; line-height: 1;}
+	.vacancy__search .form-search{width: 100%;max-width:none}
+	.filter__item label{font-size: 16px; line-height: 1;}
+	.filter-drop{min-width: 360px;}
+	#range, .rs-container{width: 300px!important;}
 }
