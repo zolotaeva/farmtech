@@ -5,18 +5,57 @@ window.addEventListener('load', function () {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const phoneMask = document.querySelectorAll('.phone');
+	const phoneMask = document.querySelectorAll('.phone');
+	const phoneFormInput = document.querySelectorAll('.phoneForm .phone');
+	
+	
+	const maskOptions = {
+		mask: '{8}(000)000-00-00',
+		lazy: false
+	};
 
+	// Функция проверки валидности номера
+	const isPhoneValid = (phone) => {
+    const cleanedPhone = phone.replace(/_/g, ''); // Убираем _
+    const regex = /^8\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
+    return regex.test(cleanedPhone);
+};
+	
+
+	phoneMask.forEach(item => {
+		item.addEventListener('click', () => {
+
+				IMask(item, maskOptions);
 			
+		
+		})
+	});
 
-			const maskOptions = {
-				mask: '+{7}(000)000-00-00',
-				lazy: false
-			};
+	phoneFormInput.forEach(item => {
+		
+		const submitButton = item.closest('.phoneForm').querySelector('input[type="submit"]');
 
-			phoneMask.forEach(item => {
-					IMask(item, maskOptions);
-			});
+		item.addEventListener('input', () => {
+			const cleanedValue = item.value.replace(/_/g, '');
+
+			submitButton.disabled = !isPhoneValid(cleanedValue);
+		});
+	});
+
+ document.querySelectorAll(".btn-close").forEach(button => {
+		button.addEventListener("click", function () {
+				let modal = button.closest(".modal");
+				if (modal) {
+						modal.querySelectorAll("form").forEach(form => {
+								form.reset(); // РЎР±СЂР°СЃС‹РІР°РµРј Р·РЅР°С‡РµРЅРёСЏ РїРѕР»РµР№ С„РѕСЂРјС‹
+			modal.querySelectorAll('.form-control').forEach(item => {
+				item.classList.remove('filled');
+			})
+
+						});
+				}
+		});
+});
 
 		
 		// Обработка клика по элементам .password-control

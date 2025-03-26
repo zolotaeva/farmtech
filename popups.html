@@ -86,8 +86,8 @@
 				</div>
 			</div>
 			<!-- вызов модалок для тестирования, в проде не выводить -->
-			 <div class="row">
 			<p class="-fs-24 pb-2 -fw-600">Для теста</p>
+			 <div class="row">
 				<div class="col-auto">
 					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg">
 						<span class="text">регистрация</span>
@@ -124,7 +124,24 @@
 					</a>
 				</div>
 			</div>
-			<!-- конец --вызов модалок для тестирования, в проде не выводить -->
+			<p class="-fs-24 pb-2 -fw-600">Забыли пароль</p>
+			<div class="row">
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#forgot-pass">
+						<span class="text">Восстановление пароля</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#forgot-pass1">
+						<span class="text">Ошибка</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#forgot-pass2">
+						<span class="text">Подтверждение</span>
+					</a>
+				</div>
+			<!-- конец --вызов модалок для тестирования -->
 		</div>
 	</header>
 
@@ -561,11 +578,10 @@
 							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
 						</div>
 						
-					
 						<div class="form__btns center">
-							<input type="submit" class="btn btn-primary" value="Войти" />
-							<!--<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reg" data-bs-dismiss="modal">Регистрация</button>
-							<button type="button" class="btn btn-link">Восстановить пароль</button>-->
+							<input type="submit" class="btn btn-primary" disabled value="Войти в личный кабинет" />
+							<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reg" data-bs-dismiss="modal">Регистрация</button>
+							<button type="button" class="btn btn-link -underline fw-bold" data-bs-toggle="modal" data-bs-target="#forgot-pass" data-bs-dismiss="modal">Забыли пароль?</button>
 						</div>
 					</form>
 				</div>
@@ -844,6 +860,78 @@
 		</div>
 	</div>
 
+	<!-- восстановление пароля -->
+	<div class="modal fade phoneForm" id="forgot-pass" tabindex="-1" aria-labelledby="forgot-pass" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Восстановление пароля</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">Введите ваш номер, указанный при регистрации</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<input type="submit" disabled class="btn btn-primary w-100" value="Изменить пароль" />
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade phoneForm" id="forgot-pass1" tabindex="-1" aria-labelledby="forgot-pass" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Восстановление пароля</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">Введите ваш номер, указанный при регистрации</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="text" class="form-control phone error filled" required id="phone" value="8 (912) 345-67-89">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+							<span class="error-text">Данный пользователь не найден в системе</span>
+						</div>
+						<input type="submit" disabled class="btn btn-primary w-100" value="Изменить пароль" />
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="forgot-pass2" tabindex="-1" aria-labelledby="sms" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Восстановление пароля</div>
+					
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">На ваш номер было отправлено СМС с новым паролем</p>
+					<p class="-fs-24 -fw-500">Введите новый пароль</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required>
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary" value="Войти в личный кабинет" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<script src="libs/bootstrap/bootstrap.min.js"></script>
