@@ -261,6 +261,32 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	})
 
+	//регистрация на курс
+	
+	document.querySelectorAll('.select-dates.required').forEach(function (wrapper) {
+		const select = wrapper.querySelector('select');
+		const displaySpan = wrapper.querySelector('.fsb-button span');
+		function updateAsterisk() {
+			const selectedOption = select.options[select.selectedIndex];
+			const text = selectedOption.textContent.trim();
+
+			if (selectedOption.value === '') {
+				wrapper.querySelector('.fsb-button span').innerHTML = `${text} <span class="red">*</span>`;
+			} else {
+				displaySpan.textContent = text; 
+			}
+		}
+		updateAsterisk();
+	
+		select.addEventListener('change', updateAsterisk);
+	});
+
+
+
+
+
+	
+
 
 		ymaps.ready(function () {
 			var myMap = new ymaps.Map('map', {
@@ -312,5 +338,8 @@ let rangeMax = document.querySelector(".range-max");
 		}
 
 	});
+
+
+
 
 	

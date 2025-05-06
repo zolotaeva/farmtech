@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Личный кабинет</title>
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#5C93F5">
+	<!-- style -->
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/fancyselect/fancyselect.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="page">
+	<div id="preloader">
+		<div class="loader"></div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="row -header-row">
+				<div class="col-auto -col-logo">
+					<a href="#" class="logotype">
+						<img src="i/logo.svg" alt="logotype">
+					</a>
+				</div>
+				<div class="col-xl-4 -col-navbar">
+					<nav class="navbar navbar-expand-md">
+						<button class="btn btn-burger js-toggle-menu"></button>
+						<div class="collapse navbar-collapse" id="header_menu">
+							<ul class="navbar-nav header-navbar -fs-18 -fw-500">
+								<li class="nav-item">
+									<a class="nav-link" href="#">Курсы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Вакансии</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Обратная связь</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="col-auto -col-phone">
+					<div class="header__phone -fs-22 -fw-600">
+						<a href="tel:88461234567">8 (846) 123-45-67</a>
+					</div>
+				</div>
+				<div class="col-auto -col-search">
+					<button class="btn toggle-search"></button>
+					<div class="header__search">
+						<button class="btn close-search"></button>
+						<form class="form-search">
+							<span class="icon"></span>
+							<input class="form-control -fs-20 -fw-300" type="search" placeholder="Поиск">
+							<button class="btn btn-search" type="submit"></button>
+						</form>
+					</div>
+				</div>
+				<div class="col-auto -col-visually">
+					<div class="header__visually">
+						<button class="btn btn-visually">
+							<span class="icon"></span>
+							<span class="text">Версия для слабовидящих</span>
+						</button>
+					</div>
+				</div>
+				<div class="col-auto -col-login">
+					<div class="header__login">
+						<a href="#" class="btn btn-login -fs-20 -fw-500">
+							<span class="icon"></span>
+							<span class="text">Личный кабинет</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="section cabinet">
+			<div class="container">
+				<h1>Личный кабинет</h1>
+				<div class="row">
+					<div class="col-md-4 col-lg-3">
+						<div class="cabinet__sidebar">
+							<nav class="nav cabinet__nav -fs-20 -fw-600">
+								
+								<a href="#" class="nav-item">
+									<span class="icon icon-user"></span> 
+									Профиль
+								</a>
+								<a href="#" class="nav-item">
+									<span class="icon icon-book"></span> 
+									Активные курсы
+								</a>
+								<a href="#" class="nav-item active">
+									<span class="icon icon-write"></span> 
+									Заявки на курсы
+								</a>
+								
+								<a href="#" class="nav-item">
+									<span class="icon icon-exit"></span> 
+									Выйти
+								</a>
+							</nav>
+						</div>
+					</div>
+					<div class="col-md-8 col-lg-9">
+						<div class="cabinet__content">
+							<div class="cabinet__title">Заявки на курсы</div>
+							<div class="cabinet__courses course ">
+								<div class="course__item">
+									<div class="row course-row align-items-stretch">
+										<div class="col-lg-4 col-xxl-3 course-col">
+											<div class="course__img">
+												<img src="i/course01.png" alt="">
+											</div>
+										</div>
+										<div class="col-lg-8 col-xxl-6 course-col">
+											<div class="course__info">
+												<div class="course__subtitle -blue pb-10">Заявка № 23214321</div>
+												<div class="course__title -fw-600 -fs-26">Современные требования к упаковке и маркировке лекарственных препаратов</div>
+												<div class="course__status -green -fw-500 -fs-18">Заявка отправлена на рассмотрение</div>
+											</div>
+										</div>
+								
+									</div>
+								</div>
+								<div class="course__item">
+									<div class="row course-row align-items-stretch">
+										<div class="col-lg-4 col-xxl-3 course-col">
+											<div class="course__img">
+												<img src="i/course02.png" alt="">
+											</div>
+										</div>
+										<div class="col-lg-8 col-xxl-6 course-col">
+											<div class="course__info">
+												<div class="course__subtitle -blue pb-10">Заявка № 23214321</div>
+												<div class="course__title -fw-600 -fs-26">Концептуальные вопросы охраны труда в фармацевтических организациях</div>
+												<div class="course__status -red -fw-500 -fs-18" >Заявка отклонена</div>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="course__result">
+												<span class="-fw-600 -fs-26">Заявка отклонена</span>
+												<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course">Ознакомиться с причинами</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="course__item">
+									<div class="row course-row align-items-stretch">
+										<div class="col-lg-4 col-xxl-3 course-col">
+											<div class="course__img">
+												<img src="i/course03.png" alt="">
+											</div>
+										</div>
+										<div class="col-lg-8 col-xxl-6 course-col">
+											<div class="course__info">
+												<div class="course__subtitle -blue pb-10">Заявка № 23214321</div>
+												<div class="course__title -fw-600 -fs-26">Актуальные вопросы применения лекарственных препаратов на основе лекарственного растительного сырья, содержащего эфирные масла</div>
+												<div class="course__status -red -fw-500 -fs-18">Внесите изменения в заявку</div>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="course__result">
+												<span class="-fw-600 -fs-26">Внесите изменения в заявку</span>
+												<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course-changes">Внести изменения</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="course__item">
+									<div class="row course-row align-items-stretch">
+										<div class="col-lg-4 col-xxl-3 course-col">
+											<div class="course__img">
+												<img src="i/course04.png" alt="">
+											</div>
+										</div>
+										<div class="col-lg-8 col-xxl-6 course-col">
+											<div class="course__info">
+												<div class="course__subtitle -blue pb-10">Заявка № 23214321</div>
+												<div class="course__title -fw-600 -fs-26">Ключевые аспекты  применения лекарственного растительного сырья</div>
+												<div class="course__status -green -fw-500 -fs-18">Заявка одобрена. Оформите документы для зачисления</div>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="course__result">
+												<span class="-fw-600 -fs-26">Заявка одобрена. Оформите документы для зачисления</span>
+												<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course-complete">Оформить документы</button>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course-close">Предупреждение</button> 
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course-done">Успех</button>
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course-completed">Оформлено</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrap">
+				<div class="row footer-row">
+					<div class="col-lg-3 col-md-6 -col-logo">
+						<div class="footer-column">
+							<div class="logotype">
+								<img src="i/logo.svg" alt="logotype">
+								<span class="logotype__text -fs-24">АН ПОО «Поволжский фармтехникум»</span>
+							</div>
+							<div class="footer__policy">
+								<a href="#">Политика обработки персональных данных</a>
+								<a href="#">Оферта</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-6 -col-contacts">
+						<div class="footer__title">Контакты:</div>
+						<div class="footer__text -fs-20">
+							<a href="tel:88461234578">8 846 123-45-78</a>
+							<a href="mailto:email@mail.ru">email@mail.ru</a>
+							<p>Юридический адрес: юр. адрес образовательной организации</p>
+							<p>С 08:00 до 19:00</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-6 -col-job">
+						<div class="footer__title">Вопросы по вакансиям:</div>
+						<div class="footer__text -fs-20">
+							<a href="tel:88461234578">8 846 123-45-78</a>
+							<a href="mailto:email@mail.ru">email@mail.ru</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 -col-subscription">
+						<div class="footer__title">Подпишитесь на рассылку:</div>
+						<div class="footer__text -fs-20">
+							<p>Оставьте свои контактные данные для уведомлений о новых курсах и акциях</p>
+						</div>
+						<div class="subscription">
+							<form class="subscription__form">
+								<input type="email" class="form-control" placeholder="E-mail">
+								<button class="btn btn-primary">
+									Подписаться
+								</button>
+							</form>
+							<div class="subscription__text -fs-15">Нажимая кнопку <span>Подписаться</span>, я соглашаюсь с <a href="#">политикой обработки персональных данных</a>.</div>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+		<!-- Modal -->
+		<div class="modal fade modal-course" id="reg1" tabindex="-1" aria-labelledby="reg1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header align-items-center">
+						<div class="modal-subtitle">Заявка № 12321321</div>
+						<button type="button" class="btn btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-title">Современные требования к упаковке и маркировке лекарственных препаратов</div>
+						<form action="" class="form">
+							<div class="modal-course-data">
+								<div class="text">Дата курса:</div>
+								<div class="modal-row">
+									<div class="data-item">
+										<input type="radio" id="data1" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data1" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data2" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data2" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data3" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data3" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data4" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data4" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data5" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data5" class="data-item-label">21.03.24</label>
+									</div>
+								</div>
+							</div>
+							<div class="modal-course-person">
+								<input type="text" class="form-control" placeholder="Фамилия" required>
+								<input type="text" class="form-control" placeholder="Имя" required>
+								<input type="text" class="form-control" placeholder="Отчество">
+							</div>
+							<div class="modal-course-gender">
+								<div class="modal-item-title">Пол</div>
+								<div class="gender-item">
+									<input type="radio" id="female" name="gender" class="custom-radiobox" value="female">
+									<label for="female">Женский</label>
+								</div>
+								<div class="gender-item">
+									<input type="radio" id="male" name="gender" class="custom-radiobox" value="male">
+									<label for="male">Мужской</label>
+								</div>
+								
+							</div>
+							<div class="modal-course-payment">
+								<div class="payment-item">
+									<input type="radio" id="individual" name="payment" class="custom-radiobox" value="individual">
+									<label for="individual">Договор и отплата<br> от физ.лица</label>
+								</div>
+								<div class="payment-item">
+									<input type="radio" id="organization" name="payment" class="custom-radiobox" value="organization">
+									<label for="organization">Договор и отплата<br> от юр. лица.</label>
+								</div>
+							</div>
+							<div class="form__btns center">
+								<input type="submit" class="btn btn-primary" value="Оформить заявку на курс" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-course" id="reg2" tabindex="-1" aria-labelledby="reg2" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header align-items-center">
+						<div class="modal-subtitle">Заявка № 12321321</div>
+						<button type="button" class="btn btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-title">Современные требования к упаковке и маркировке лекарственных препаратов</div>
+						<form action="" class="form">
+							<div class="modal-course-data">
+								<div class="text">Дата курса:</div>
+								<div class="modal-row">
+									<div class="data-item">
+										<input type="radio" id="data11" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data11" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data12" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data12" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data13" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data13" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data14" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data14" class="data-item-label">21.03.24</label>
+									</div>
+									<div class="data-item">
+										<input type="radio" id="data15" name="data" class="custom-radiobox" value="21.03.24">
+										<label for="data15" class="data-item-label">21.03.24</label>
+									</div>
+								</div>
+							</div>
+							<div class="modal-course-person">
+								<input type="text" class="form-control" placeholder="Фамилия" required>
+								<input type="text" class="form-control" placeholder="Имя" required>
+								<input type="text" class="form-control" placeholder="Отчество">
+							</div>
+							<div class="modal-course-gender">
+								<div class="modal-item-title">Пол</div>
+								<div class="gender-item">
+									<input type="radio" id="female1" name="gender" class="custom-radiobox" value="female">
+									<label for="female1">Женский</label>
+								</div>
+								<div class="gender-item">
+									<input type="radio" id="male1" name="gender" class="custom-radiobox" value="male">
+									<label for="male1">Мужской</label>
+								</div>
+								
+							</div>
+							<div class="modal-course-payment">
+								<div class="payment-item">
+									<input type="radio" id="individual1" name="payment" class="custom-radiobox" value="individual">
+									<label for="individual1">Договор и отплата<br> от физ.лица</label>
+								</div>
+								<div class="payment-item">
+									<input type="radio" id="organization1" name="payment" class="custom-radiobox" value="organization">
+									<label for="organization1">Договор и отплата<br> от юр. лица.</label>
+								</div>
+							</div>
+							
+							<a href="#" class="btn btn-download" download>Скачать договор на обучение</a>
+							
+							<div class="form__btns center">
+								<input type="submit" class="btn btn-primary" value="Оформить заявку на курс" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade phoneForm" id="reg-course" tabindex="-1" aria-labelledby="reg-course" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">Регистрация на курс</div>
+						<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+	
+						<div class="row justify-content-between modal-top pb-20">
+							<div class="col-auto">
+								<div class="reg-num -blue -fw-500">№ 123213421341</div>
+							</div>
+							<div class="col-auto">
+								<div class="reg-date -fw-500">01.09.24</div>
+							</div>
+						</div>
+	
+						<div class="-fs-24 -fw-500 pb-10">Название курса, возможно длинное название</div>
+						<div class="-fs-20 -blue pb-20 -fw-600 ">
+							<span class="time mr-20">144 часа</span> 
+							<span class="price">2100 руб.</span>
+						</div>
+						<div class="noties">Здесь указана причина отказа</div>
+						<div class="-fw-500 pb-15">Поля отмеченные <span class="red">*</span> обязательны к заполнению</div>
+						<form action="" class="form">
+							<div class="select-dates required">
+								<select class="dates">
+									<option value="">Выберите даты обучения</option>
+									<option value="15.04.2025">15.04.2025 – 21.04.2025</option>
+									<option value="15.05.2025">15.05.2025 – 21.05.2025</option>
+									<option value="15.06.2025">15.06.2025 – 21.06.2025</option>
+								</select>
+							</div>
+							<div class="form-input required" >
+								<input type="text" class="form-control" required value="">
+								<label>Фамилия<span class="red">*</span></label>
+							</div>
+							<div class="form-input required" >
+								<input type="text" class="form-control" required value="">
+								<label>Имя<span class="red">*</span></label>
+							</div>
+							<div class="form-input" >
+								<input type="text" class="form-control" required value="">
+								<label>Отчество</label>
+							</div>
+							<div class="form-input required" >
+								<input type="text" class="form-control error filled" required value="г. Москва, ул. Петрова">
+								<label>Почтовый адрес для получения документов <span class="red">*</span></label>
+								<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+								<div class="error-text">Некорректные данные, нужно изменение</div>
+							</div>
+							<div class="-fs-24 pt-25 pb-15 -fw-600">Документы для зачисления на курс</div>
+							<div class="pb-10">Требования к загружаемым файлам: форматы и размеры. Требования к загружаемым файлам: форматы и размерыТребования к загружаемым файлам: форматы и размеры</div>
+							<div class="form-docs">
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Паспорт<span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>СНИЛС <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Диплом о среднем профессиональном образовании <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Сертификат/свидетельство об аккредитации/выписка об аккредитации с Госуслуг <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Документы, подтверждающие смену ФИО<span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Другие документы <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+	
+				
+							<input type="submit" class="btn btn-primary w-100" value="Оформить заявку на курс" />
+	
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade phoneForm" id="reg-course-changes" tabindex="-1" aria-labelledby="reg-course-changes" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">Регистрация на курс</div>
+						<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+	
+						<div class="row justify-content-between modal-top pb-20">
+							<div class="col-auto">
+								<div class="reg-num -blue -fw-500">№ 123213421341</div>
+							</div>
+							<div class="col-auto">
+								<div class="reg-date -fw-500">01.09.24</div>
+							</div>
+						</div>
+	
+						<div class="-fs-24 -fw-500 pb-10">Название курса, возможно длинное название</div>
+						<div class="-fs-20 -blue pb-20 -fw-600 ">
+							<span class="time mr-20">144 часа</span> 
+							<span class="price">2100 руб.</span>
+						</div>
+						<div class="noties">Информация из админки: какие изменения должны быть внесены.</div>
+						<div class="-fw-500 pb-15">Поля отмеченные <span class="red">*</span> обязательны к заполнению</div>
+						<form action="" class="form">
+							<div class="select-dates required">
+								<select class="dates">
+									<option value="">Выберите даты обучения</option>
+									<option value="15.04.2025">15.04.2025 – 21.04.2025</option>
+									<option value="15.05.2025">15.05.2025 – 21.05.2025</option>
+									<option value="15.06.2025">15.06.2025 – 21.06.2025</option>
+								</select>
+							</div>
+							<div class="form-input required" >
+								<input type="text" class="form-control" required value="">
+								<label>Фамилия<span class="red">*</span></label>
+							</div>
+							<div class="form-input required" >
+								<input type="text" class="form-control" required value="">
+								<label>Имя<span class="red">*</span></label>
+							</div>
+							<div class="form-input" >
+								<input type="text" class="form-control" required value="">
+								<label>Отчество</label>
+							</div>
+							<div class="form-input required" >
+								<input type="text" class="form-control error filled" required value="г. Москва, ул. Петрова">
+								<label>Почтовый адрес для получения документов <span class="red">*</span></label>
+								<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+								<div class="error-text">Некорректные данные, нужно изменение</div>
+							</div>
+							<div class="-fs-24 pt-25 pb-15 -fw-600">Документы для зачисления на курс</div>
+							<div class="pb-10">Требования к загружаемым файлам: форматы и размеры. Требования к загружаемым файлам: форматы и размерыТребования к загружаемым файлам: форматы и размеры</div>
+							<div class="form-docs">
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Паспорт<span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>СНИЛС <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Диплом о среднем профессиональном образовании <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Сертификат/свидетельство об аккредитации/выписка об аккредитации с Госуслуг <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Документы, подтверждающие смену ФИО<span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Другие документы <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+	
+				
+							<input type="submit" class="btn btn-primary w-100" value="Оформить заявку на курс" />
+	
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="modal fade" id="reg-course-complete" tabindex="-1" aria-labelledby="reg-course-complete" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">Оформите документы для зачисления</div>
+						<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+	
+						<div class="row justify-content-between modal-top pb-20">
+							<div class="col-auto">
+								<div class="reg-num -blue -fw-500">№ 123213421341</div>
+							</div>
+							<div class="col-auto">
+								<div class="reg-date -fw-500">01.09.24</div>
+							</div>
+						</div>
+						<div class="-fw-500 pb-15">Распечатать, заполнить, подписать,
+							загрузить в ЛК фото оформленных бланков, как оплатить и т.п</div>
+						<ul class="doc-download">
+							<li><a href="#" download>Инструкция по подаче заявки на портале edu.rosminzdrav.ru</a></li>
+							<li><a href="#" download>Инструкция по регистрации на портале edu.rosminzdrav.ru и созданию 5-летнего цикла</a></li>
+							<li><a href="#" download>Бланк с реквизитами для оплаты</a></li>
+						</ul>
+
+						<div class="-fs-24 -fw-500 pb-10">Загрузка документов</div>
+						<div class="-fw-500 pb-15">Требования к загружаемым файлам: форматы и размеры</div>
+						
+						
+						<form action="" class="form">
+						
+							<div class="form-docs">
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Заявка с портала edu.rosminzdrav.ru <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row docs-item">
+									<div class="col-6">
+										<div class="col-item form-input required">
+											<label>Документ, подтверждающий оплату <span class="red">*</span></label>
+											<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="col-item">
+											<label class="input-file">
+												<input type="file"><span class="input-file-text"></span>
+												<span class="btn add-doc"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<input type="submit" class="btn btn-primary w-100" value="Отправить документы" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="reg-course-close" tabindex="-1" aria-labelledby="reg-course-close" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">Заявка одобрена. Оформите документы для зачисления</div>
+						<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="-fs-24 -fw-500">Данные не будут сохранены. Вы хотите выйти?</p>
+						<div class="row modal-row-btns">
+							<div class="col-auto">
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course-complete">Нет, вернуться к заполнению</button>
+							</div>
+							<div class="col-auto"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть заявку</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="reg-course-done" tabindex="-1" aria-labelledby="reg-course-done" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title"></div>
+						<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body -center">
+						<div class="img">
+								<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M27.0002 0.333984C12.2668 0.333984 0.333496 12.2673 0.333496 27.0007C0.333496 41.7207 12.2668 53.6673 27.0002 53.6673C41.7202 53.6673 53.6668 41.7207 53.6668 27.0007C53.6668 12.2673 41.7202 0.333984 27.0002 0.333984ZM23.081 38.9198C22.3 39.7008 21.0337 39.7008 20.2526 38.9198L9.74771 28.4149C8.96666 27.6338 8.96666 26.3675 9.74771 25.5864L10.6926 24.6415C11.4737 23.8605 12.74 23.8605 13.521 24.6415L20.2526 31.3731C21.0337 32.1542 22.3 32.1542 23.081 31.3731L40.4793 13.9749C41.2603 13.1938 42.5267 13.1938 43.3077 13.9749L44.2526 14.9198C45.0337 15.7008 45.0337 16.9672 44.2526 17.7482L23.081 38.9198Z" fill="#1068D7"/>
+								</svg>
+								
+						</div>
+						<p class="-fs-28 -fw-600">Документы для зачисления отправлены</p>
+						<p class="-fs-20">Ваши документы отправлены на проверку. После проверки Вам будет открыт доступ к курсу. Информация
+							будет отправлена Вам письмом и отобразится в личном кабинете</p>
+						<a href="#" class="btn btn-primary">В личный кабинет</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="reg-course-completed" tabindex="-1" aria-labelledby="reg-course-completed" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">Документы об обучении оформлены</div>
+						<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body -fs-20 -fw-500">
+						<p>Для Вас оформлено Удостоверение о повышении квалификации.</p>
+						<ul class="doc-download">
+							<li><a href="#" download>Скачать электронное удостоверение</a></li>
+						</ul>
+						<p>Оригинал удостоверения отправлен Вам заказным письмом Почтой России по адресу (адрес,указанный клиентом в заявке). Вы можете отследить почтовое отправление на сайте или в приложении Почты России по трек-номеру</p>
+						<div class="doc-track ">Трек номер письма 342342342342</div>
+						<p>Вам начислены баллы НМФО за обучение. Вы можете посмотреть начисленные баллы в личном кабинете на портале edu.rosminzdrav.ru</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=48d36dc6-33fc-424e-bf65-009cb3397086" type="text/javascript"></script>
+
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
+	<script src="libs/fancyselect/fancyselect.js"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>

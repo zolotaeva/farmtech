@@ -255,4 +255,17 @@
 	.filter__item label{font-size: 16px; line-height: 1;}
 	.filter-drop{min-width: 360px;}
 	#range, .rs-container{width: 300px!important;}
+
+
+
+	.course__result .btn{margin-top: 15px; width: 100%;}
+	.modal-row-btns{flex-direction: column; gap: 15px;}
+	.modal-body .-fs-28{font-size: 22px;}
+	.modal-body .-fs-24{font-size: 18px;}
+	.modal-title{font-size: 25px;}
+	.select-dates .fsb-button span:not(.red){ font-size: 14px !important; }
+	.form-input label{height: auto;}
+	.form-input input.form-control{font-size: 14px;}
+	.form-input label { top: 16px; }
+	.modal-title{width: 90%;}
 }
