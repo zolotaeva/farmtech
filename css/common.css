@@ -884,5 +884,5 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 .btn-primary, .btn-secondary{white-space: nowrap;}
 .doc-track{font-weight: 500; color: #1068D7; position: relative; padding-left: 34px; font-size: 16px;}
 .doc-track::before{content: ''; background: url('data:image/svg+xml,<svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 0H2C0.9 0 0 0.9 0 2V16H2V2H14V0ZM17 4H6C4.9 4 4 4.9 4 6V20C4 21.1 4.9 22 6 22H17C18.1 22 19 21.1 19 20V6C19 4.9 18.1 4 17 4ZM17 20H6V6H17V20Z" fill="%231068D7"/></svg>') no-repeat center center; width: 19px; height: 22px; position: absolute; top: 0; left: 0;}
-
-
+.form-input{position: relative;}
+.form-input .password-control{right: 30px;}
