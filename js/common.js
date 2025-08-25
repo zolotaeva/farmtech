@@ -190,9 +190,17 @@ document.querySelectorAll('.input-file input[type=file]').forEach(input => {
     if (isExisting) fileItem.classList.add('existing-file');
     if (fileId) fileItem.dataset.fileId = fileId;
 
-    const nameSpan = document.createElement('span');
-    nameSpan.className = 'file-name';
-    nameSpan.textContent = isExisting ? file.name : file.name;
+    let nameEl;
+    if (isExisting && file.url) {
+      nameEl = document.createElement('a');
+      nameEl.href = file.url;
+      nameEl.target = "_blank";
+      nameEl.textContent = file.name;
+    } else {
+      nameEl = document.createElement('span');
+      nameEl.className = 'file-name';
+      nameEl.textContent = file.name;
+    }
 
     const removeBtn = document.createElement('button');
     removeBtn.type = 'button';
@@ -209,36 +217,60 @@ document.querySelectorAll('.input-file input[type=file]').forEach(input => {
       fileItem.remove();
     });
 
-    fileItem.append(nameSpan, removeBtn);
+    fileItem.append(nameEl, removeBtn);
     fileListContainer.appendChild(fileItem);
   }
 
   // обработка новых файлов
   input.addEventListener('change', function() {
 		const newFiles = Array.from(this.files);
-		
+		const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
 
-    newFiles.forEach(file => {
-      if (files.length + existingFiles.length < limit) {
-      // Проверяем, чтобы не добавлять дубликаты по имени
-				if (!files.some(f => f.name === file.name) && 
-						!existingFiles.some(f => f.name === file.name)) {
-					files.push(file);
-					renderFileItem(file);
-				}
+		newFiles.forEach(file => {
+			const ext = file.name.split('.').pop().toLowerCase();
+			const isAllowed = allowedTypes.includes(file.type) || ['pdf', 'jpg', 'jpeg', 'png'].includes(ext);
+			if (!isAllowed) {
+				alert(`Файл "${file.name}" имеет недопустимый формат. Разрешены только PDF, JPG, PNG.`);
+				return; 
 			}
+      if (files.length + existingFiles.length < limit) {
+        if (!files.some(f => f.name === file.name) && 
+            !existingFiles.some(f => f.name === file.name)) {
+          files.push(file);
+          renderFileItem(file);
+        }
+      }
     });
+
     input.value = '';
   });
 
   // функция для добавления уже загруженных файлов
-  function addExistingFile(name, fileId, url) {
-    existingFiles.push({ name, id: fileId, url });
-    renderFileItem({ name, url }, true, fileId);
-  }
+  //function addExistingFile(name, fileId, url) {
+  //  existingFiles.push({ name, id: fileId, url });
+  //  renderFileItem({ name, url }, true, fileId);
+  //}
 
-  // пример использования:
-  // addExistingFile('already_uploaded.pdf', '123', '/uploads/already_uploaded.pdf');
+  // соберём файлы, что уже есть в DOM
+  wrapper.querySelectorAll('.file-item.existing-file').forEach(item => {
+    const link = item.querySelector('a');
+    if (link) {
+      const name = link.textContent.trim();
+      const url = link.href;
+      const id = item.dataset.fileId || null;
+      existingFiles.push({ name, id, url });
+
+      // вешаем обработчик удаления на уже существующую кнопку
+      const removeBtn = item.querySelector('.file-remove');
+      if (removeBtn) {
+        removeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          existingFiles = existingFiles.filter(f => f.id !== id);
+          item.remove();
+        });
+      }
+    }
+  });
 });
 
 
@@ -449,6 +481,7 @@ document.querySelectorAll('.input-file input[type=file]').forEach(input => {
 						el.classList.remove('error');
 					}
 				}
+				
 			
 			});
 
@@ -467,7 +500,8 @@ document.querySelectorAll('.input-file input[type=file]').forEach(input => {
 			} else {
 				wrapper.classList.remove('error');
 				if (colItem) colItem.classList.remove('error');
-			}
+			 }
+			
 		});
 
 			//Если есть ошибки не отправляем форму
