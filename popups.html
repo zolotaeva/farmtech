@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#5C93F5">
+	<!-- style -->
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/fancyselect/fancyselect.css">
+
+
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="home">
+	<div id="preloader">
+		<div class="loader"></div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="row -header-row">
+				<div class="col-auto -col-logo">
+					<a href="#" class="logotype">
+						<img src="i/logo.svg" alt="logotype">
+					</a>
+				</div>
+				<div class="col-xl-4 -col-navbar">
+					<nav class="navbar navbar-expand-md">
+						<button class="btn btn-burger js-toggle-menu"></button>
+						<div class="collapse navbar-collapse" id="header_menu">
+							<ul class="navbar-nav header-navbar -fs-18 -fw-500">
+								<li class="nav-item">
+									<a class="nav-link" href="#">Курсы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Вакансии</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Обратная связь</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="col-auto -col-phone">
+					<div class="header__phone -fs-22 -fw-600">
+						<a href="tel:88461234567">8 (846) 123-45-67</a>
+					</div>
+				</div>
+				<div class="col-auto -col-search">
+					<button class="btn toggle-search"></button>
+					<div class="header__search">
+						<button class="btn close-search"></button>
+						<form class="form-search">
+							<span class="icon"></span>
+							<input class="form-control -fs-20 -fw-300" type="search" placeholder="Поиск">
+							<button class="btn btn-search" type="submit"></button>
+						</form>
+					</div>
+				</div>
+				<div class="col-auto -col-visually">
+					<div class="header__visually">
+						<button class="btn btn-visually">
+							<span class="icon"></span>
+							<span class="text">Версия для слабовидящих</span>
+						</button>
+					</div>
+				</div>
+				<div class="col-auto -col-login">
+					<div class="header__login">
+						<a href="#" class="btn btn-login -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#auth">
+							<span class="icon"></span>
+							<span class="text">Личный кабинет</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- вызов модалок для тестирования, в проде не выводить -->
+			<p class="-fs-24 pb-2 -fw-600">Для теста</p>
+			 <div class="row">
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg">
+						<span class="text">регистрация</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg-example">
+						<span class="text">регистрация пример</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#auth">
+						<span class="text">авторизация</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#sms">
+						<span class="text">смс</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#limit">
+						<span class="text">лимит</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#code">
+						<span class="text">код</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#vacancy">
+						<span class="text">вакансия</span>
+					</a>
+				</div>
+			</div>
+			<p class="-fs-24 pb-2 -fw-600">Забыли пароль</p>
+			<div class="row">
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#forgot-pass">
+						<span class="text">Восстановление пароля</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#forgot-pass1">
+						<span class="text">Ошибка</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#forgot-pass2">
+						<span class="text">Подтверждение</span>
+					</a>
+				</div>
+				
+			
+		</div>
+		<p class="-fs-24 pb-2 -fw-600">Регистрация на курс</p>
+		<div class="row">
+			<div class="col-auto">
+				<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg-course">
+					<span class="text">Регистрация</span>
+				</a>
+			</div>
+			<div class="col-auto">
+				<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg-course-clean">
+					<span class="text">Предупреждение</span>
+				</a>
+			</div>
+			<div class="col-auto">
+				<a href="#" class="btn btn-primary -fs-20 -fw-500" data-bs-toggle="modal" data-bs-target="#reg-course-thanks">
+					<span class="text">Благодарность</span>
+				</a>
+			</div>
+		</div>
+		<!-- конец --вызов модалок для тестирования -->
+	</header>
+
+	<main class="main">
+		<div class="section promo">
+			<div class="container">
+				<div class="promo__wrap">
+					<div class="promo__info">
+						<div class="promo__title -fw-700 -fs-68">
+							Курсы фармацевтики 
+							<span class="bg-blue">
+								для повышения навыков
+							</span>
+						</div>
+						<div class="promo__text -fs-24">Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+						<div class="promo__btns">
+							<a href="#" class="btn btn-primary">Посмотреть курсы</a>
+							<a href="#" class="btn btn-secondary">Обратный звонок</a>
+						</div>
+					</div>
+					<div class="promo__img">
+						<img src="i/promo.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section catalog">
+			<div class="container">
+				<div class="section__title">Доступные курсы</div>
+				<div class="row item-row">
+					<div class="col-xl-6">
+						<div class="item">
+							<div class="item__duration -fs-20 -fw-500">5 месяцев</div>
+							<div class="item__content">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<a href="#" class="item__title -fw-600 -fs-36">Название курса, возможно в 2 строки</a>
+										<div class="item__text -fs-20">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+										<div class="item__actions">
+											<button class="btn btn-primary btn-card">Зарегистрироваться</button>
+											<div class="item__price -fw-600 -fs-32">
+												от 999 999 руб.
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item__img">
+											<img src="i/item01.png" alt="">
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="item">
+							<div class="item__duration -fs-20 -fw-500">5 месяцев</div>
+							<div class="item__content">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<a href="#" class="item__title -fw-600 -fs-36">Название курса, возможно в 2 строки</a>
+										<div class="item__text -fs-20">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+										<div class="item__actions">
+											<button class="btn btn-primary btn-card">Зарегистрироваться</button>
+											<div class="item__price -fw-600 -fs-32">
+												от 999 999 руб.
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item__img">
+											<img src="i/item02.png" alt="">
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="item">
+							<div class="item__duration -fs-20 -fw-500">5 месяцев</div>
+							<div class="item__content">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<a href="#" class="item__title -fw-600 -fs-36">Название курса, возможно в 2 строки</a>
+										<div class="item__text -fs-20">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+										<div class="item__actions">
+											<button class="btn btn-primary btn-card">Зарегистрироваться</button>
+											<div class="item__price -fw-600 -fs-32">
+												от 999 999 руб.
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item__img">
+											<img src="i/item03.png" alt="">
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="item">
+							<div class="item__duration -fs-20 -fw-500">5 месяцев</div>
+							<div class="item__content">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<a href="#" class="item__title -fw-600 -fs-36">Название курса, возможно в 2 строки</a>
+										<div class="item__text -fs-20">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+										<div class="item__actions">
+											<button class="btn btn-primary btn-card">Зарегистрироваться</button>
+											<div class="item__price -fw-600 -fs-32">
+												от 999 999 руб.
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="item__img">
+											<img src="i/item04.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog__btn">
+					<a href="#" class="btn btn-secondary">Посмотреть все курсы</a>
+				</div>
+			</div>
+		</div>
+		<div class="section privilege">
+			<div class="container">
+				<div class="section__title">Преимущества обучения</div>
+				<div class="row privilege-row">
+					<div class="col-md-6 col-lg-6 col-xl-4 privilege-col">
+						<div class="privilege__item">
+							<div class="privilege__img">
+								<img src="i/privilege1.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-4 privilege-col">
+						<div class="privilege__item">
+							<div class="privilege__info">
+								<div class="row justify-content-between">
+									<div class="col-9">
+										<div class="privilege__title -fw-600 -fs-24">Название преимущества, возможно в 2 строки</div>
+									</div>
+									<div class="col-auto">
+										<div class="privilege__icon">
+											<img src="i/icon-privilege01.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="privilege__text">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+								
+		
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-4 privilege-col">
+						<div class="privilege__item">
+							<div class="privilege__info">
+								<div class="row justify-content-between">
+									<div class="col-9">
+										<div class="privilege__title -fw-600 -fs-24">Название преимущества, возможно в 2 строки</div>
+									</div>
+									<div class="col-auto">
+										<div class="privilege__icon">
+											<img src="i/icon-privilege02.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="privilege__text">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-4 privilege-col">
+						<div class="privilege__item">
+							<div class="privilege__info">
+								<div class="row justify-content-between">
+									<div class="col-9">
+										<div class="privilege__title -fw-600 -fs-24">Название преимущества, возможно в 2 строки</div>
+									</div>
+									<div class="col-auto">
+										<div class="privilege__icon">
+											<img src="i/icon-privilege03.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="privilege__text">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-4 privilege-col">
+						<div class="privilege__item">
+							<div class="privilege__info">
+								<div class="row justify-content-between">
+									<div class="col-9">
+										<div class="privilege__title -fw-600 -fs-24">Название преимущества, возможно в 2 строки</div>
+									</div>
+									<div class="col-auto">
+										<div class="privilege__icon">
+											<img src="i/icon-privilege04.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="privilege__text">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-4 privilege-col">
+						<div class="privilege__item">
+							<div class="privilege__img">
+								<img src="i/privilege2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section about">
+			<div class="container">
+				<div class="section__title">О нас</div>
+				<div class="row about-row">
+					<div class="col-xl-6">
+						<div class="about__info">
+							<div class="about__top">
+								<div class="about__title -fw-600 -fs-24">Подзаголовок, возможно написание в 2-3 строки</div>
+								<div class="about__text -fs-20">Краткое описание Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения. Курсы фармацевтики для повышения навыков: большой выбор и доступные способы обучения.</div>
+							</div>
+							<div class="about__bottom">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="about__numbers">
+											<div class="numbers-item">
+												<div class="num -fs-32 -fw-600">50+</div>
+												<div class="text -fs-20">Доступных курсов</div>
+											</div>
+											<div class="numbers-item">
+												<div class="num -fs-32 -fw-600">999+</div>
+												<div class="text -fs-20">Обученных студентов</div>
+											</div>
+											<div class="numbers-item">
+												<div class="num -fs-32 -fw-600">999+</div>
+												<div class="text -fs-20">Часов материала и практики</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="about__picture">
+											<img src="i/about2.png" alt="">
+										</div>
+									</div>
+								</div>
+								
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="about__img">
+							<img src="i/about.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section timetable">
+			<div class="container">
+				<div class="timetable__wrap">
+					<div class="section__title">График расписания курсов</div>
+				
+					<div class="timetable__box">
+						<table class="table">
+							<tr>
+								<th></th>
+								<th>Понедельник <br>01.01</th>
+								<th>Вторник <br>02.01</th>
+								<th>Среда <br>03.01</th>
+								<th>Четверг <br>04.01</th>
+								<th>Пятница <br>05.01</th>
+								<th>Суббота <br>06.01</th>
+								<th>Воскресенье <br>07.01</th>
+							</tr>
+							<tr>
+								<td>Название курса</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+							</tr>
+							<tr>
+								<td>Название курса</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+							</tr>
+							<tr>
+								<td>Название курса</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+							</tr>
+							<tr>
+								<td>Название курса</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+							</tr>
+							<tr>
+								<td>Название курса</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+							</tr>
+							<tr>
+								<td>Название курса</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+								<td>18:00</td>
+							</tr>
+						</table>
+					</div>
+					<div class="timetable__btn">
+						<a href="#" class="btn btn-primary">Посмотреть все курсы</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrap">
+				<div class="row footer-row">
+					<div class="col-lg-3 col-md-6 -col-logo">
+						<div class="footer-column">
+							<div class="logotype">
+								<img src="i/logo.svg" alt="logotype">
+								<span class="logotype__text -fs-24">АН ПОО «Поволжский фармтехникум»</span>
+							</div>
+							<div class="footer__policy">
+								<a href="#">Политика обработки персональных данных</a>
+								<a href="#">Оферта</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-6 -col-contacts">
+						<div class="footer__title">Контакты:</div>
+						<div class="footer__text -fs-20">
+							<a href="tel:88461234578">8 846 123-45-78</a>
+							<a href="mailto:email@mail.ru">email@mail.ru</a>
+							<p>Юридический адрес: юр. адрес образовательной организации</p>
+							<p>С 08:00 до 19:00</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-6 -col-job">
+						<div class="footer__title">Вопросы по вакансиям:</div>
+						<div class="footer__text -fs-20">
+							<a href="tel:88461234578">8 846 123-45-78</a>
+							<a href="mailto:email@mail.ru">email@mail.ru</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 -col-subscription">
+						<div class="footer__title">Подпишитесь на рассылку:</div>
+						<div class="footer__text -fs-20">
+							<p>Оставьте свои контактные данные для уведомлений о новых курсах и акциях</p>
+						</div>
+						<div class="subscription">
+							<form class="subscription__form">
+								<input type="email" class="form-control" placeholder="E-mail">
+								<button class="btn btn-primary">
+									Подписаться
+								</button>
+							</form>
+							<div class="subscription__text -fs-15">Нажимая кнопку <span>Подписаться</span>, я соглашаюсь с <a href="#">политикой обработки персональных данных</a>.</div>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="auth" tabindex="-1" aria-labelledby="auth" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Вход в личный кабинет</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24">Введите номер телефона и пароль</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required>
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary" disabled value="Войти в личный кабинет" />
+							<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reg" data-bs-dismiss="modal">Регистрация</button>
+							<button type="button" class="btn btn-link -underline fw-bold" data-bs-toggle="modal" data-bs-target="#forgot-pass" data-bs-dismiss="modal">Забыли пароль?</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="code" tabindex="-1" aria-labelledby="code" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Вход в личный кабинет</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24">На почту <span class="blue">email@mail.ru</span> отправлено письмо с кодом подтверждения.</p>
+					<form action="" class="form">
+						<input type="text" class="form-control" placeholder="Введите код" required>
+						<!--<input type="password" class="form-control" placeholder="Пароль" required>-->
+					
+						<input type="submit" class="btn btn-primary w-100" value="Войти" />
+						<div class="form-info -center mt-3">
+							<p class="-fs-18 -fw-500">Если письмо не приходит, проверьте папки "Спам" и "Рассылки".</p>
+
+							<p><a href="#" class="blue -fw-500">Запросить код повторно </a></p>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="reg" tabindex="-1" aria-labelledby="reg" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Регистрация</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Поля отмеченные <span class="red">*</span> обязательны к заполнению</p>
+					<form action="" class="form">
+						<div class="form-input required" >
+							<input type="text" class="form-control" required>
+							<label>Имя<span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-email required">
+							<div class="form-input required">
+								<input type="text" class="form-control email" required>
+								<label>E-mail <span class="red">*</span></label>
+								<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Что то про почту"> <span class="i-icon"></span> </span>
+							</div>
+							<select class="domains">
+								<option value="@mail.ru">@mail.ru</option>
+								<option value="@yandex.ru">@yandex.ru</option>
+								<option value="@list.ru">@list.ru</option>
+								<option value="@bk.ru">@bk.ru</option>
+							</select>
+						</div>
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required>
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" id="password-input2" name="password" class="form-control" required>
+							<label>Повторите пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Будьте внимательны!"> <span class="i-icon"></span> </span>
+						</div>
+						
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check1">
+							<label for="check1">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check2" >
+							<label for="check2">Согласен с <a href="#" target="_blank">распространением персональных данных</a><span class="red">*</span></label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check3" checked>
+							<label for="check3">Согласен на <a href="#" target="_blank">получение уведомлений рекламного характера </a><span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+							</label>
+						</div>
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary disabled" value="Зарегистрироваться" />
+							<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#auth" data-bs-dismiss="modal">Войти</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="reg-example" tabindex="-1" aria-labelledby="reg" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Регистрация</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Поля отмеченные <span class="red">*</span> обязательны к заполнению</p>
+					<form action="" class="form">
+						<div class="form-input required" >
+							<input type="text" class="form-control" required value="Иван">
+							<label>Имя<span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone" value="+7(912)345-67-89">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-email required">
+							<div class="form-input required">
+								<input type="text" class="form-control email" required value="ivan.ivanov">
+								<label>E-mail <span class="red">*</span></label>
+								<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Что то про почту"> <span class="i-icon"></span> </span>
+							</div>
+							<select class="domains">
+								<option value="@mail.ru" selected>@mail.ru</option>
+								<option value="@yandex.ru">@yandex.ru</option>
+								<option value="@list.ru">@list.ru</option>
+								<option value="@bk.ru">@bk.ru</option>
+							</select>
+						</div>
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required value="545454544">
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" id="password-input2" name="password" class="form-control" required value="545454544">
+							<label>Повторите пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Будьте внимательны!"> <span class="i-icon"></span> </span>
+						</div>
+						
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check1" checked>
+							<label for="check1">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check2" checked>
+							<label for="check2">Согласен с <a href="#" target="_blank">распространением персональных данных</a><span class="red">*</span></label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check3" checked>
+							<label for="check3">Согласен на <a href="#" target="_blank">получение уведомлений рекламного характера </a><span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+							</label>
+						</div>
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary" value="Зарегистрироваться" />
+							<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#auth" data-bs-dismiss="modal">Войти</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="sms" tabindex="-1" aria-labelledby="sms" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Пожалуйста, введите код из смс</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>На номер <span class="blue">+7 (912) 345-67-89</span>  отправлено смс с кодом подтверждения.</p>
+					<form action="" class="form">
+						<input type="text" class="form-control" placeholder="Введите код подтверждения" required>
+						<input type="submit" class="btn btn-primary w-100" value="Ввести код" />
+						<div class="form-info -center">
+							<p>Если код не приходит в течение <span class="blue">N минут</span>, <br>запросите код повторно</p>
+							<div class="repeat">
+								<!-- при активности добавляем клас active-->
+								<p class="gray active">Запросить код повторно <span>(60 секунд)</span></p>
+								<a href="#" class="blue active">Запросить код повторно </a>
+							</div>
+							
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="limit" tabindex="-1" aria-labelledby="limit " aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Повторный код вход возможен не раньше чем через 15 минут</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Вы сможете запросить код повторно через</p>
+					<p class="blue -fs-24 -fw-500">15 минут</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="vacancy" tabindex="-1" aria-labelledby="vacancy" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Отклик на вакансию</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Поля отмеченные <span class="red">*</span> обязательны к заполнению</p>
+					<form action="" class="form">
+						<div class="form-input required" >
+							<input type="text" class="form-control" required>
+							<label>Фамилия<span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required" >
+							<input type="text" class="form-control" required>
+							<label>Имя<span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input required">
+							<input type="text" class="form-control email" required>
+							<label>E-mail <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Что то про почту"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input">
+							<input type="text" class="form-control" required>
+							<label>Доп контакты</label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input">
+							<input type="text" class="form-control" required>
+							<label>Ссылка на резюме</label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Ссылка на резюме"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-input">
+							<label for="file-upload" class="custom-file-upload">
+								Прикрепить файл
+							</label>
+						
+							<span class="-fw-500 ml-15">.doc, .png, pdf, .jpg / макс. размер 5 мб.</span>
+							<input type="file" id="file-upload" style="display: none;"/>
+						</div>
+						<div class="form-input">
+							<input type="text" class="form-control" required>
+							<label>Комментарий</label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Ссылка на резюме"> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="custom-checkbox" id="check11">
+							<label for="check11">Согласен с <a href="#" target="_blank">обработкой персональных данных</a><span class="red">*</span></label>
+						</div>
+					
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary disabled" value="Отправить" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- восстановление пароля -->
+	<div class="modal fade phoneForm" id="forgot-pass" tabindex="-1" aria-labelledby="forgot-pass" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Восстановление пароля</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">Введите ваш номер, указанный при регистрации</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="text" class="form-control phone" required id="phone">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+						</div>
+						<input type="submit" disabled class="btn btn-primary w-100" value="Изменить пароль" />
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade phoneForm" id="forgot-pass1" tabindex="-1" aria-labelledby="forgot-pass" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Восстановление пароля</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">Введите ваш номер, указанный при регистрации</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="text" class="form-control phone error filled" required id="phone" value="8 (912) 345-67-89">
+							<label>Телефон <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Еще что то про телефон"> <span class="i-icon"></span> </span>
+							<span class="error-text">Данный пользователь не найден в системе</span>
+						</div>
+						<input type="submit" disabled class="btn btn-primary w-100" value="Изменить пароль" />
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="forgot-pass2" tabindex="-1" aria-labelledby="sms" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Восстановление пароля</div>
+					
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">На ваш номер было отправлено СМС с новым паролем</p>
+					<p class="-fs-24 -fw-500">Введите новый пароль</p>
+					<form action="" class="form">
+						<div class="form-input required">
+							<input type="password" id="password-input" name="password" class="form-control" required>
+							<label>Пароль <span class="red">*</span></label>
+							<a href="#" class="password-control"></a>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Пароль должен.."> <span class="i-icon"></span> </span>
+						</div>
+						<div class="form__btns center">
+							<input type="submit" class="btn btn-primary" value="Войти в личный кабинет" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- регистрация на курс -->
+
+	<div class="modal fade phoneForm" id="reg-course" tabindex="-1" aria-labelledby="reg-course" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Регистрация на курс</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="row justify-content-between modal-top pb-20">
+						<div class="col-auto">
+							<div class="reg-num -blue -fw-500">№ 123213421341</div>
+						</div>
+						<div class="col-auto">
+							<div class="reg-date -fw-500">01.09.24</div>
+						</div>
+					</div>
+
+					<div class="-fs-24 -fw-500 pb-10">Название курса, возможно длинное название</div>
+					<div class="-fs-20 -blue pb-20 -fw-600 ">
+						<span class="time mr-20">144 часа</span> 
+						<span class="price">2100 руб.</span>
+					</div>
+					<div class="noties">Информация из админки: какие изменения должны быть внесены.</div>
+
+
+					<div class="-fw-500 pb-15">Поля отмеченные <span class="red">*</span> обязательны к заполнению</div>
+
+
+					<form action="" class="form">
+						<div class="select-dates required">
+							<select class="dates">
+								<option value="">Выберите даты обучения</option>
+								<option value="15.04.2025">15.04.2025 – 21.04.2025</option>
+								<option value="15.05.2025">15.05.2025 – 21.05.2025</option>
+								<option value="15.06.2025">15.06.2025 – 21.06.2025</option>
+							</select>
+						</div>
+						<div class="form-input required" >
+							<input type="text" class="form-control" required value="">
+							<label>Фамилия<span class="red">*</span></label>
+						</div>
+						<div class="form-input required" >
+							<input type="text" class="form-control" required value="">
+							<label>Имя<span class="red">*</span></label>
+						</div>
+						<div class="form-input" >
+							<input type="text" class="form-control" required value="">
+							<label>Отчество</label>
+						</div>
+						<div class="form-input required" >
+							<input type="text" class="form-control error filled" required value="г. Москва, ул. Петрова">
+							<label>Почтовый адрес для получения документов <span class="red">*</span></label>
+							<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+							<div class="error-text">Некорректные данные, нужно изменение</div>
+						</div>
+						<div class="-fs-24 pt-25 pb-15 -fw-600">Документы для зачисления на курс</div>
+						<div class="pb-10">Требования к загружаемым файлам: форматы и размеры. Требования к загружаемым файлам: форматы и размерыТребования к загружаемым файлам: форматы и размеры</div>
+						<div class="form-docs">
+							<div class="row docs-item">
+								<div class="col-6">
+									<div class="col-item form-input required">
+										<label>Паспорт<span class="red">*</span></label>
+										<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="col-item">
+										<label class="input-file">
+											<input type="file"><span class="input-file-text"></span>
+											<span class="btn add-doc"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row docs-item">
+								<div class="col-6">
+									<div class="col-item form-input required">
+										<label>СНИЛС <span class="red">*</span></label>
+										<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="col-item">
+										<label class="input-file">
+											<input type="file"><span class="input-file-text"></span>
+											<span class="btn add-doc"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row docs-item">
+								<div class="col-6">
+									<div class="col-item form-input required">
+										<label>Диплом о среднем профессиональном образовании <span class="red">*</span></label>
+										<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="col-item">
+										<label class="input-file">
+											<input type="file"><span class="input-file-text"></span>
+											<span class="btn add-doc"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row docs-item">
+								<div class="col-6">
+									<div class="col-item form-input required">
+										<label>Сертификат/свидетельство об аккредитации/выписка об аккредитации с Госуслуг <span class="red">*</span></label>
+										<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="col-item">
+										<label class="input-file">
+											<input type="file"><span class="input-file-text"></span>
+											<span class="btn add-doc"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row docs-item">
+								<div class="col-6">
+									<div class="col-item form-input required">
+										<label>Документы, подтверждающие смену ФИО<span class="red">*</span></label>
+										<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="col-item">
+										<label class="input-file">
+											<input type="file"><span class="input-file-text"></span>
+											<span class="btn add-doc"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row docs-item">
+								<div class="col-6">
+									<div class="col-item form-input required">
+										<label>Другие документы <span class="red">*</span></label>
+										<span class="tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="right" title="Какая-то информация"> <span class="i-icon"></span> </span>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="col-item">
+										<label class="input-file">
+											<input type="file"><span class="input-file-text"></span>
+											<span class="btn add-doc"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+			
+						<input type="submit" class="btn btn-primary w-100" value="Оформить заявку на курс" />
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="reg-course-clean" tabindex="-1" aria-labelledby="reg-course-clean" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Регистрация на курс</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">Заявка на курс не будет сохранена. Хотите отменить регистрацию?</p>
+					<div class="row modal-row-btns">
+						<div class="col-auto">
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course">Нет, вернуться к заполнению</button>
+						</div>
+						<div class="col-auto"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть заявку</button></div>
+					</div>
+					
+					
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="modal fade" id="reg-course-clean" tabindex="-1" aria-labelledby="reg-course-clean" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Регистрация на курс</div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="-fs-24 -fw-500">Заявка на курс не будет сохранена. Хотите отменить регистрацию?</p>
+					<div class="row modal-row-btns">
+						<div class="col-auto">
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-course">Нет, вернуться к заполнению</button>
+						</div>
+						<div class="col-auto"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть заявку</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<div class="modal fade" id="reg-course-thanks" tabindex="-1" aria-labelledby="reg-course-thanks" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"></div>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body -center">
+					<div class="img">
+							<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M27.0002 0.333984C12.2668 0.333984 0.333496 12.2673 0.333496 27.0007C0.333496 41.7207 12.2668 53.6673 27.0002 53.6673C41.7202 53.6673 53.6668 41.7207 53.6668 27.0007C53.6668 12.2673 41.7202 0.333984 27.0002 0.333984ZM23.081 38.9198C22.3 39.7008 21.0337 39.7008 20.2526 38.9198L9.74771 28.4149C8.96666 27.6338 8.96666 26.3675 9.74771 25.5864L10.6926 24.6415C11.4737 23.8605 12.74 23.8605 13.521 24.6415L20.2526 31.3731C21.0337 32.1542 22.3 32.1542 23.081 31.3731L40.4793 13.9749C41.2603 13.1938 42.5267 13.1938 43.3077 13.9749L44.2526 14.9198C45.0337 15.7008 45.0337 16.9672 44.2526 17.7482L23.081 38.9198Z" fill="#1068D7"/>
+							</svg>
+							
+					</div>
+					<p class="-fs-28 -fw-600">Благодарим за обращение. Ваша заявка отправлена на рассмотрение. </p>
+					<p class="-fs-20">Отследить статус рассмотрения заявки Вы можете в личном кабинете в разделе «Заявки на курсы». Уведомление о результатах рассмотрения заявки также будет отправлено Вам на электронную почту. Пожалуйста, проверяйте почту, чтобы своевременно получать информацию</p>
+					<a href="#" class="btn btn-primary">В личный кабинет</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
+	<script src="libs/fancyselect/fancyselect.js"></script>
+	<script src="https://unpkg.com/imask"></script>
+	<script src="libs/rslider/rSlider.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>
