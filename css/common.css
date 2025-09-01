@@ -932,7 +932,9 @@ input[type=radio].custom-radiobox:checked + label:after {background: #1068D7;}
 
 .cookie__text { padding-right: 55px; width: calc(100% - 130px); color: #1F1F1F; font-size: 16px; line-height: 1.1; }
 
-.cookie__btn { width: 130px; padding: 12px 24px; background: #1068D7; color: #FFFFFF; font-weight: 600; font-size: 15px; max-height: 41px; line-height: 1; }
+.cookie__btn { width: 130px; padding: 12px 24px; background: #1068D7; color: #FFFFFF; font-weight: 600; font-size: 15px; max-height: 41px; line-height: 1; border-radius: 100px; }
+
+
 
 .cookie__text a { color: #386781; text-decoration: underline; }
 
