@@ -143,6 +143,7 @@
 	.course-detail__img{height: 180px; }
 	.course-detail__img img{height: 100%; object-fit: cover; max-width: none; object-position: center;}
 	.test__item-left{margin-bottom: 20px;}
+	.cookie{max-width: none; right: 5px; left: 5px; width: auto;}
 }
 
 @media (max-width: 767px) {
@@ -268,4 +269,6 @@
 	.form-input input.form-control{font-size: 14px;}
 	.form-input label { top: 16px; }
 	.modal-title{width: 90%;}
+	.cookie{flex-direction: column;align-items: flex-start; bottom: 5px; }
+	.cookie__text{padding-right: 0; width: 100%; padding-bottom: 20px; font-size: 14px;}
 }

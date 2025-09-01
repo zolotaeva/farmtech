@@ -574,7 +574,34 @@ let rangeMax = document.querySelector(".range-max");
 
 	});
 }
+document.addEventListener("DOMContentLoaded", () => {
+	const cookieBlock = document.querySelector('.cookie');
+	const cookieBtn = document.querySelector('.cookie__btn');
 
+	// Проверка: есть ли уже согласие
+	if (getCookie('cookie_consent') === 'accepted') {
+		cookieBlock.style.display = 'none';
+	}
+
+	// Обработка клика
+	cookieBtn.addEventListener('click', function () {
+		setCookie('cookie_consent', 'accepted', 365);
+		cookieBlock.style.display = 'none';
+	});
+
+	// Установка cookie
+	function setCookie(name, value, days) {
+		const date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+	}
+
+	// Получение cookie
+	function getCookie(name) {
+		const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+		return match ? match[2] : null;
+	}
+});
 
 
 	
